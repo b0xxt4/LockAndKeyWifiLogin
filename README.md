@@ -10,5 +10,32 @@ lock_key_user:
   password: password
 ```
 
+Use pmset in Terminal to schedule a wakeup everyday at 07:00:
+```
+sudo pmset repeat wake MTWRFSU 07:00:00
+```
+
+Write cronjob with execution for caffeinate & this script
+
+```
+crontab -e
+```
+
+Enter the following with your path:
+```
+0 7 * * * pgrep caffeinate -t 120
+0 7 * * * ~/.venv/bin/python ~/LockKeyLoginAuto.py
+```
+
+Use ```:WQ``` to safe and quit the Vim-Editor.
+
+You can check if the job is installed via:
+```
+crontab -l
+```
+
+
+
+
 
 
