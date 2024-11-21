@@ -4,11 +4,11 @@ be able to execute the script via cronjob.
 
 
 Enter Credentials in yaml file:
-'''
+```
 lock_key_user:
   email: email
   password: password
-'''
+```
 
 
 
